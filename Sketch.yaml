@@ -1,0 +1,23 @@
+query_or_model_data:
+  name: 'Sketch'
+  num_workers: 1
+  shuffle: True
+  data_path: 'data'
+  model_path: '.data/render/test'
+  batch_size: 16
+  pix_size : 224
+  num_views : 12
+  tau : 0.1
+  channels : 3
+
+trainer_model:
+  device: 'cuda:0'
+  epochs: 600
+  lr: 0.00001
+  beta1: 0.5
+  beta2: 0.999
+
+models:
+  save_root: './params'
+  save_name: 'cross_net_params.pth'
+
